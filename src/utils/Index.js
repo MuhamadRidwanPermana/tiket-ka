@@ -1,0 +1,7 @@
+export { default as IconBus } from '@/utils/Icons/IconBus.vue'
+export { default as IconDate } from '@/utils/Icons/IconDate.vue'
+export { default as IconUser } from '@/utils/Icons/IconUser.vue'
+export { default as IconPlus } from '@/utils/Icons/IconPlus.vue'
+export { default as IconMinus } from '@/utils/Icons/IconMinus.vue'
+export { default as IconClose } from '@/utils/Icons/IconClose.vue'
+export { default as IconChevronDown } from '@/utils/Icons/IconChevronDown.vue'

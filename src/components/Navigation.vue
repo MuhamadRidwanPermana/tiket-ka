@@ -1,0 +1,79 @@
+<script>
+import { avatar1 } from "@/utils/Images.vue";
+
+export default {
+  data() {
+    return {
+      avatar1
+    };
+  },
+};
+</script>
+
+<template lang="">
+  <nav
+    class="font-roboto bg-primary-color-background text-primary flex justify-between lg:px-10 lg:shadow-none md:px-8 shadow-md px-5 py-3"
+  >
+    <div>
+      <svg
+        class="cursor-pointer"
+        xmlns="http://www.w3.org/2000/svg"
+        width="150"
+        height="40"
+        viewBox="0 0 199 40"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_5090_581)">
+          <rect width="199" height="40" fill="white" />
+          <path
+            d="M148.979 5.98438V33H143.412V5.98438H148.979ZM165.158 5.98438L154.452 19.3252L148.273 25.9678L147.271 20.6982L151.446 14.9834L158.33 5.98438H165.158ZM158.831 33L150.871 20.5127L154.99 17.0615L165.418 33H158.831ZM180.835 10.6045L173.487 33H167.568L177.606 5.98438H181.373L180.835 10.6045ZM186.939 33L179.573 10.6045L178.979 5.98438H182.783L192.877 33H186.939ZM186.605 22.9434V27.3037H172.337V22.9434H186.605Z"
+            fill="#0B0061"
+          />
+          <path
+            d="M18.9136 6.69531V33H15.481V6.69531H18.9136ZM27.3687 6.69531V9.5498H7.04395V6.69531H27.3687ZM35.0107 6.69531V33H31.5239V6.69531H35.0107ZM44.8389 6.69531V33H41.3521V6.69531H44.8389ZM60.7192 6.69531L49.7891 18.9624L43.6465 25.3398L43.0684 21.6182L47.6934 16.5234L56.5278 6.69531H60.7192ZM57.3589 33L47.6211 20.1729L49.6987 17.4087L61.5142 33H57.3589ZM81.2969 30.1636V33H67.3677V30.1636H81.2969ZM68.0723 6.69531V33H64.5854V6.69531H68.0723ZM79.4541 18.0049V20.8413H67.3677V18.0049H79.4541ZM81.1162 6.69531V9.5498H67.3677V6.69531H81.1162ZM95.6958 6.69531V33H92.2632V6.69531H95.6958ZM104.151 6.69531V9.5498H83.8262V6.69531H104.151Z"
+            fill="#1D2433"
+          />
+          <rect x="109" y="6" width="28" height="21" fill="#0C0062" />
+          <rect x="109" y="29" width="28" height="5" fill="#36ABA5" />
+          <path
+            d="M115.249 21.5H137V11H123.275C118.545 11 114.539 14.0715 113.177 18.3116C112.873 19.2608 112.906 20.397 113.711 20.9938C114.14 21.3117 114.672 21.5 115.249 21.5Z"
+            fill="#FFFCFF"
+          />
+          <path
+            d="M120.8 19.0998C120.8 18.1057 121.606 17.2998 122.6 17.2998H137V19.0998H120.8Z"
+            fill="#36ABA5"
+          />
+          <path
+            d="M124.311 12.9334C124.367 12.8499 124.46 12.7998 124.561 12.7998H134.34C134.579 12.7998 134.722 13.0668 134.589 13.2662L133.189 15.3662C133.134 15.4497 133.04 15.4998 132.94 15.4998H123.161C122.921 15.4998 122.778 15.2328 122.911 15.0334L124.311 12.9334Z"
+            fill="#36ABA5"
+          />
+          <path
+            d="M113.459 17.5413H116.228C118.234 17.5413 120.108 16.5387 121.22 14.8695L122.289 13.2662C122.422 13.0668 122.279 12.7998 122.04 12.7998H117.341C115.617 13.9573 114.255 15.6051 113.459 17.5413Z"
+            fill="#36ABA5"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_5090_581">
+            <rect width="199" height="40" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    <div class="font-Roboto lg:flex hidden gap-10 items-center cursor-pointer">
+      <p class="text-md font-semibold">Pesan Tiket</p>
+      <p class="text-md font-medium">Tiketku</p>
+      <img
+        :src="avatar1"
+        class="w-10 h-10 border border-border-color rounded-full"
+        alt="avatar"
+      />
+    </div>
+
+    <div class="lg:hidden cursor-pointer flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list w-8 h-8 text-text-secondary-dark" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+    </svg>
+  </div>
+  </nav>
+
+</template>
