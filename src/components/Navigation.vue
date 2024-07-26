@@ -137,7 +137,7 @@ export default {
 </template>
 
 <style lang="css">
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 425px) {
   .custom-class {
     width: 20rem !important;
     height: 100vh !important;

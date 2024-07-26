@@ -19,14 +19,14 @@ export default {
 <template lang="">
   <div class="w-full h-full">
     <div>
-      <div class="w-[65rem] h-[20rem]">
+      <div class="section-hero-image">
         <a-carousel autoplay effect="fade">
           <img :src="img_kreta1" class="h-[calc(100vh-64px)] object-cover" />
           <img :src="img_kreta2" class="h-[calc(100vh-64px)] object-cover" />
           <img :src="img_kreta3" class="h-[calc(100vh-64px)] object-cover" />
         </a-carousel>
       </div>
-      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#000] w-[65rem] h-1/2 mt-auto">
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#000] section-hero-image h-1/2 mt-auto">
         <div class="absolute inset-x-0 bottom-0 flex gap-3 items-center justify-start text-text-primary-light font-Montserrat p-5">
           <div class="flex justify-center items-center bg-text-disabled-light w-10 h-10 rounded-lg">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-geo-alt-fill w-5 h-5 text-text-primary-light" viewBox="0 0 16 16">
@@ -44,6 +44,35 @@ export default {
 </template>
 
 <style lang="css">
+@media only screen and (min-width: 768px) {
+  .section-hero-image{
+    min-width: 25rem;
+    max-width: 35rem;
+    height: 20rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .section-hero-image{
+    min-width: 35rem;
+    max-width: 50rem;
+    height: 20rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section-hero-image{
+    min-width: 40rem;
+    max-width: 55rem;
+    height: 20rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .section-hero-image{
+    min-width: 50rem;
+    max-width: 63rem;
+    height: 20rem;
+  }
+}
+
 ul{
   margin: 0 0 1rem 55rem !important;
   padding: 0 !important;
