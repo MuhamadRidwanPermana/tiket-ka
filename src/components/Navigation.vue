@@ -1,10 +1,32 @@
 <script>
+import { ref } from 'vue';
+
+import { Drawer } from 'ant-design-vue';
+
 import { avatar1 } from "@/utils/Images.vue";
+import { IconTicket, IconSettings, IconHamburgerMenu } from '@/utils/Index.js'
+
+const open = ref(false);
+const afterOpenChange = bool => {
+  console.log('open', bool);
+};
+const showDrawer = () => {
+  open.value = true;
+};
 
 export default {
+  components: {
+    IconTicket,
+    IconSettings, 
+    IconHamburgerMenu,
+    ADrawer: Drawer
+  },
   data() {
     return {
-      avatar1
+      avatar1,
+      open,
+      showDrawer,
+      afterOpenChange
     };
   },
 };
@@ -12,7 +34,7 @@ export default {
 
 <template lang="">
   <nav
-    class="font-roboto bg-primary-color-background text-primary flex justify-between lg:px-10 lg:shadow-none md:px-8 shadow-md px-5 py-3"
+    class="font-roboto bg-primary-color-background flex justify-between lg:px-10 lg:shadow-none md:px-8 shadow-md px-5 py-3"
   >
     <div>
       <svg
@@ -60,7 +82,7 @@ export default {
       </svg>
     </div>
     <div class="font-Roboto lg:flex hidden gap-10 items-center cursor-pointer">
-      <p class="text-md font-semibold">Pesan Tiket</p>
+      <p class="text-md font-semibold text-primary">Pesan Tiket</p>
       <p class="text-md font-medium">Tiketku</p>
       <img
         :src="avatar1"
@@ -69,11 +91,57 @@ export default {
       />
     </div>
 
-    <div class="lg:hidden cursor-pointer flex items-center">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list w-8 h-8 text-text-secondary-dark" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-    </svg>
+    <div class="lg:hidden cursor-pointer flex items-center" @click="showDrawer">
+      <IconHamburgerMenu />
   </div>
   </nav>
 
+  <!-- Sidebar -->
+  <a-drawer
+    v-model:open="open"
+    placement="right"
+    @after-open-change="afterOpenChange"
+    :closable="false"
+    class="custom-class"
+  >
+    <div class="font-Montserrat flex flex-col justify-between w-full h-full">
+      <div class="flex flex-col gap-7">
+        <div class="w-full h-full flex items-center justify-start px-5 border-b-2 border-border-color cursor-pointer">
+          <IconTicket class="text-secondary-light w-5 h-5" />
+          <p class="text-md font-bold w-full h-8 flex text-secondary-light items-center px-5">Pesan Tiket</p>
+        </div>
+        <div class="w-full h-full flex items-center justify-start px-5 border-b-2 border-border-color cursor-pointer">
+          <IconTicket class="text-secondary-light w-5 h-5" />
+          <p class="text-md font-semibold w-full h-8 flex text-secondary-light items-center px-5">Tiketku</p>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center justify-start gap-2 px-5 cursor-pointer mb-3">
+          <IconSettings class="text-secondary-light w-5 h-5 ml-1" />
+          <p class="text-md font-semibold w-full h-8 flex text-secondary-light items-center px-5">Pengaturan</p>
+        </div>
+        <div>
+          <div class="w-full h-full flex gap-5 items-center justify-start px-5 pt-5  border-t-2 border-border-color cursor-pointer">
+            <img
+              :src="avatar1"
+              class="w-8 h-8 border border-border-color rounded-full"
+              alt="avatar"
+            />
+            <p class="text-md font-bold">Admin KAI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a-drawer>
+
 </template>
+
+<style lang="css">
+@media screen and (max-width: 525px) {
+  .custom-class {
+    width: 20rem !important;
+    height: 100vh !important;
+    margin-left: 100px !important;
+  }
+}
+</style>
