@@ -101,9 +101,9 @@ export default {
     v-model:open="open"
     placement="right"
     @after-open-change="afterOpenChange"
-    :closable="false"
+    :closable="true"
     class="custom-class"
-  >
+  >  
     <div class="font-Montserrat flex flex-col justify-between w-full h-full">
       <div class="flex flex-col gap-7">
         <div class="w-full h-full flex items-center justify-start px-5 border-b-2 border-border-color cursor-pointer">
@@ -137,11 +137,19 @@ export default {
 </template>
 
 <style lang="css">
-@media screen and (max-width: 425px) {
-  .custom-class {
-    width: 20rem !important;
-    height: 100vh !important;
-    margin-left: 100px !important;
-  }
+.ant-drawer-header-title {
+  width: 100% !important;
+  height: auto;
+  padding: 0 !important ;
+}
+.ant-drawer-header button {
+  margin-left: 300px !important;
+  background-color: #002c72 !important;
+  border-radius: 10px;
+  padding: 3.5px 8px 8px 8px !important;
+}
+.ant-drawer-header button svg{
+  color: #fff !important;
+  padding: 1px;
 }
 </style>
